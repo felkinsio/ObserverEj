@@ -1,8 +1,8 @@
 package Subjects;
 
+import Observers.Observer;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observer;
 
 public class WeatherData implements Subject {
 
@@ -13,7 +13,10 @@ public class WeatherData implements Subject {
     public  List<Observer> observers = new ArrayList<>();
 
     public void notificarObserver(){
-        System.out.println("se agrego algo");
+
+        for (Observer o : observers) {
+        o.actualizarEstado(temperatura, humedad, presion);
+    }
     }
     public void quitarObserver(Observer observer){
         observers.remove(observer);
@@ -21,4 +24,14 @@ public class WeatherData implements Subject {
     public void agregarObserver(Observer observer){
         observers.add(observer);
     }
+    public double getTemperatura() {
+        return temperatura;
+    }
+    public double getHumedad() {
+        return humedad;
+    }
+    public double getPresion() {
+        return presion;
+    }
+
 }

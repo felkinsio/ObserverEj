@@ -1,6 +1,6 @@
 package Subjects;
 
-import java.util.Observer;
+import Observers.Observer;
 
 interface Subject {
     public void notificarObserver();

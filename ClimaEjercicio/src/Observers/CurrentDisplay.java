@@ -8,8 +8,8 @@ public class CurrentDisplay implements Observer, Display{
     public void display(){
         System.out.println("Current Conditions\n"+
                         "Temperatura:" + temperatura + 
-                        "\nHumedad" + humedad + 
-                        "\nPresion" + presion);
+                        "\nHumedad: " + humedad + 
+                        "\nPresion: " + presion);
     }
     
     public void actualizarEstado(double temperatura, double humedad, double presion){

@@ -1,6 +1,6 @@
 package Observers;
 
-interface Observer {
+public interface Observer {
 
     public void actualizarEstado(double temperatura, double humedad, double presion);
 }
